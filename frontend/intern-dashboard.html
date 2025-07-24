@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: var(--card-bg);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class='bx bxs-vector'></i> Seat Booker</a>
+            <div class="d-flex align-items-center">
+                <span id="welcome-message" class="navbar-text me-3"></span>
+                <button id="logout-btn" class="btn btn-outline-danger d-flex align-items-center"><i class='bx bx-log-out me-1'></i>Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="message"></div>
+        <div class="row">
+            <!-- Seat Booking Section -->
+            <div class="col-lg-5 mb-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title h4 mb-3"><i class='bx bx-calendar-edit me-2'></i>Book a Seat</h2>
+                        <div class="mb-3">
+                            <label for="reservation-date" class="form-label fw-bold">Select a Date:</label>
+                            <input type="date" id="reservation-date" class="form-control">
+                        </div>
+                        <div id="seat-grid" class="seat-grid flex-grow-1">
+                            <div class="d-flex justify-content-center align-items-center w-100" style="grid-column: 1 / -1;">
+                                 <p class="text-muted m-0">Please select a date to see available seats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- My Reservations Section -->
+            <div class="col-lg-7">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title h4 mb-3"><i class='bx bx-list-ul me-2'></i>My Reservations</h2>
+                        <div class="table-responsive">
+                            <table id="reservations-table" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Seat</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Confirm Your Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    Are you sure you want to book this seat?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirm-booking-btn" class="btn btn-primary">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/intern.js"></script>
+</body>
+</html>

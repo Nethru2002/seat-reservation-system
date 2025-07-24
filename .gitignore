@@ -1,0 +1,5 @@
+# Environment variables - DO NOT COMMIT
+/backend/.env
+
+# Node.js dependencies
+/backend/node_modules
