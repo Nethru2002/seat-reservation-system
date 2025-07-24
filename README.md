@@ -34,20 +34,6 @@ A full-stack web application for booking office desks, designed with a modern, r
 
 ---
 
-## 📸 Screenshots
-
-#### Login & Registration
-![Login Page](Images/Login Page.jpeg)
-
-#### Intern Dashboard
-![Intern Dashboard](Images/Intern Dashboard.jpeg)
-
-#### Admin Dashboard
-![Admin Dashboard](Images/Admin Dashboard.jpeg)
-
-
----
-
 ## 🚀 Setup and Installation
 
 To run this project locally, follow these steps:
