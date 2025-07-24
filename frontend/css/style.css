@@ -106,7 +106,7 @@ thead th {
     margin-top: 20px;
     min-height: 50px; /* Ensures grid has height even when empty */
 }
-/* THIS IS THE UPDATED RULE FOR SEAT BOXES */
+
 .seat {
     display: flex; /* Use Flexbox for centering */
     align-items: center; /* Vertically center */

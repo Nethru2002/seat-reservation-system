@@ -181,7 +181,6 @@ confirmBookingBtn.addEventListener('click', async () => {
         showMessage('Seat booked successfully! A confirmation email has been sent.', 'success');
         
         dateInput.value = '';
-        // FIX #1: Use the correct placeholder after successful booking
         seatGrid.innerHTML = placeholderHtml;
         loadMyReservations();
     } catch (err) {

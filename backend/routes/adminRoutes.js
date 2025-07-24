@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.use(protect, admin);
 
-// --- NEW: Dashboard Stats Endpoint ---
+// --- Dashboard Stats Endpoint ---
 router.get('/stats', async (req, res) => {
     try {
         const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
@@ -31,7 +31,7 @@ router.get('/stats', async (req, res) => {
     }
 });
 
-// --- NEW: Chart Data Endpoint ---
+// --- Chart Data Endpoint ---
 router.get('/reports/usage-by-day', async (req, res) => {
     try {
         const query = `
@@ -68,8 +68,6 @@ router.get('/reports/usage-by-day', async (req, res) => {
     }
 });
 
-
-// --- Existing Routes (No changes needed) ---
 router.post('/seats', async (req, res) => {
     const { seat_number, location_area } = req.body;
     try {
